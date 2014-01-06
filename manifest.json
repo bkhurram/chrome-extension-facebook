@@ -1,4 +1,4 @@
-{ 
+{
 	"manifest_version": 2,
 	"name": "Facebook change profile",
 	"description": "Fake hack or facebook profile.",
@@ -6,12 +6,12 @@
 	"permissions": [
 		"activeTab",
 		"tabs", 
-    		"history",
-    		"background",
+    	"history",
+    	"background",
 		"http://*/*", 
 		"https://*/*"
 	],
-	"update_url" : "http://localhost/chrome/update.xml",
+	
 	"browser_action": {
 		"default_icon": "icon.png",
 		"default_popup": "popup.html"
@@ -22,7 +22,9 @@
   	},
 
 	"content_scripts": [ {
-		"js": [ "js/jquery-1.10.2.min.js","js/content-script.js" ],
+		"js": [ "js/jquery-1.10.2.min.js", "js/underscore-min.js","js/content-script.js" ],
 		"matches": [ "http://*/*", "https://*/*"]
-	}]
+	}],
+	
+	"update_url" : "http://localhost/chrome/update.xml"
 }

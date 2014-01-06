@@ -2,13 +2,23 @@
 <head>
 </head>
 <body>
-	<label>Name</label>
-	<input type="text" id="name" placeholder="name" />
-	<label>Picture url</label>
-	<input type="text" id="picture" placeholder="photo link" />
+	<form action="#">
 	
-	<button id="modifica">Modifica</button>
+		<label>Name</label>
+		<input type="text" id="name" placeholder="name" />
+		
+		<label>BIG Picture url</label>
+		<input type="text" id="bigpicture" placeholder="big photo link" />
+		
+		<label>Picture url</label>
+		<input type="text" id="smallpicture" placeholder="photo link" />
+
+		<button id="modifica">Modifica</button>
+
+	</form>
+	
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/utils/TemplateLoader.js"></script>
 	<script type="text/javascript" src="js/popup.js"></script>
 </body>
 </html>
