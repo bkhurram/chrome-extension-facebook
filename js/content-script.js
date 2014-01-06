@@ -32,7 +32,7 @@ var changePage = function ( params ) {
 	$( ".nameButton.uiButton.uiButtonOverlay .uiButtonText" ).html( params.name );
 	
 	// # change name in diario
-	$( ".fcg .fwb a" ).html( params.name );
+	$( ".fcg .fwb a[href*='" + FB.id + "']" ).html( params.name );
 	
 	// # change name in comment
 	$( ".UFICommentActorName:contains('" + defaultName + "')" ).html( params.name );
@@ -46,13 +46,20 @@ var changePage = function ( params ) {
 	
 	// # big image
 	$( ".coverPhotoImg.photo.img" ).attr( "src", params.bigImages );
+	$( ".coverChangeThrobber.img" ).attr( "src", params.bigImages );
+	$( ".coverEmptyWrap.coverImage.coverNoImage" );
 	
 	// # small image
 	$( ".profileThumb img" ).attr( "src", params.smallImages );
 	$( ".profilePicThumb img" ).attr( "src", params.smallImages );
 	$( ".headerTinymanPhoto" ).attr( "src", params.smallImages );
 	$( "._s0._50c7._54rt.img" ).attr( "src", params.smallImages );
+	
+	// # commented img
 	$( ".UFIComment .lfloat a[href*='" + FB.id + "'] img").attr( "src", params.smallImages );
+	
+	// # new comment img
+	$( ".UFIReplyActorPhotoWrapper.UFIImageBlockImage img" ).attr( "src", params.smallImages );
 };
 
 $(function() {
